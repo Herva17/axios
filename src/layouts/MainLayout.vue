@@ -28,7 +28,7 @@
         <q-item-label
           header
         >
-          Essential Links
+        GESTION GITHUB
         </q-item-label>
 
         <EssentialLink
@@ -55,16 +55,13 @@ defineOptions({
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
+    title: 'PRODUIT',
+    icon: 'home',
     link: 'https://quasar.dev'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'CLIENT',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
   },
   {
     title: 'Discord Chat Channel',
