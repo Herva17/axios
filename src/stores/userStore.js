@@ -6,9 +6,7 @@ export const useUserStore = defineStore("userStore", {
     users: [], // Liste des utilisateurs
   }),
   getters: {
-    state: () => {
-      getuser: (state) => state.users;
-    },
+      getuser: (state) => state.users,
   },
   actions: {
     async fetchUsers() {
