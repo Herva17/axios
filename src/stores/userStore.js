@@ -6,19 +6,17 @@ export const useUserStore = defineStore("userStore", {
     users: [], // Liste des utilisateurs
   }),
   getters: {
-      getuser: (state) => state.users,
+    getuser: (state) => state.users, // Retourne la liste des utilisateurs
   },
   actions: {
     async fetchUsers() {
-      // Réinitialiser les erreurs
-
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
-        );
-        this.users = response.data; // Enregistrer les utilisateurs
+        // Appel API pour récupérer les utilisateurs
+        const response = await axios.get("http://localhost:8082/api/user.php");
+        this.users = response.data; // Met à jour les utilisateurs dans le store
       } catch (err) {
-        this.error = "Impossible de récupérer les utilisateurs."; // Capturer l'erreur
+        this.error = "Impossible de récupérer les utilisateurs."; // Gestion des erreurs
+        console.error(err);
       }
     },
   },
